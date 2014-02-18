@@ -16,7 +16,7 @@
         <td><%= qtdeambiente.qtde %></td>
         <td><%= link_to 'Show', qtdeambiente %></td>
         <td><%= link_to 'Edit', edit_qtdeambiente_path(qtdeambiente) %></td>
-        <td><%= link_to 'Excluir', qtdeambiente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', qtdeambiente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

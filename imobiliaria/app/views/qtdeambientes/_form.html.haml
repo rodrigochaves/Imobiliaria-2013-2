@@ -1,0 +1,6 @@
+= semantic_form_for [@qtdeambiente] do |form|
+  
+  = form.input :qtde, :label => 'Quantidade'
+  = form.input :imovel, :member_label => :codigo, :label => 'Imovel'
+  = form.input :ambiente, :member_label => :descricao, :label => 'Ambiente'
+  = form.submit 'Salvar'
