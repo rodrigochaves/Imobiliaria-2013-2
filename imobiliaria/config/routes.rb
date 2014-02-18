@@ -1,4 +1,6 @@
 Imobiliaria::Application.routes.draw do
+  resources :ambientes
+
   resources :imovels
 
   resources :donos

@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140218115745) do
+ActiveRecord::Schema.define(version: 20140218130711) do
+
+  create_table "ambientes", force: true do |t|
+    t.string   "descricao"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "codigos", force: true do |t|
     t.string   "nome"

@@ -32,7 +32,7 @@
 
 <p>
   <strong>Dono:</strong>
-  <%= @imovel.dono %>
+  <%= @imovel.dono.codigo %>
 </p>
 
 <%= link_to 'Edit', edit_imovel_path(@imovel) %> |

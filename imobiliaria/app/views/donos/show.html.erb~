@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Código:</strong>
+  <strong>Codigo:</strong>
   <%= @dono.codigo %>
 </p>
 
@@ -21,17 +21,17 @@
 </p>
 
 <p>
-  <strong>E-mail:</strong>
+  <strong>Email:</strong>
   <%= @dono.email %>
 </p>
 
 <p>
-  <strong>Endereço:</strong>
+  <strong>Endereco:</strong>
   <%= @dono.endereco %>
 </p>
 
 <p>
-  <strong>CPF:</strong>
+  <strong>Cpf:</strong>
   <%= @dono.cpf %>
 </p>
 

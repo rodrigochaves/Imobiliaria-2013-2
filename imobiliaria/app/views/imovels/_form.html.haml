@@ -1,10 +1,10 @@
 = semantic_form_for [@imovel] do |form|
   
-  = form.input :codigo, :label => 'Codigo'
+  = form.input :codigo, :label => 'Código'
   = form.input :modo, :label => 'Modo' 
   = form.input :tipo, :label => 'Tipo' 
-  = form.input :preco, :label => 'Preco'
-  = form.input :endereco, :label => 'Endereco'
+  = form.input :preco, :label => 'Preço'
+  = form.input :endereco, :label => 'Endereço'
   = form.input :datacadastro, :as => :string, :label => 'Data Cadastro'
   = form.input :dono, :member_label => :codigo, :label => 'Dono' 
   = form.submit 'Salvar'
