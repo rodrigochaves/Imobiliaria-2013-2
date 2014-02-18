@@ -1,0 +1,39 @@
+<h1>Listing imovels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Codigo</th>
+      <th>Modo</th>
+      <th>Tipo</th>
+      <th>Preco</th>
+      <th>Endereco</th>
+      <th>Datacadastro</th>
+      <th>Dono</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @imovels.each do |imovel| %>
+      <tr>
+        <td><%= imovel.codigo %></td>
+        <td><%= imovel.modo %></td>
+        <td><%= imovel.tipo %></td>
+        <td><%= imovel.preco %></td>
+        <td><%= imovel.endereco %></td>
+        <td><%= imovel.datacadastro %></td>
+        <td><%= imovel.dono %></td>
+        <td><%= link_to 'Show', imovel %></td>
+        <td><%= link_to 'Edit', edit_imovel_path(imovel) %></td>
+        <td><%= link_to 'Destroy', imovel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Imovel', new_imovel_path %>

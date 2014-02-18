@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @imovel.codigo %>
+</p>
+
+<p>
+  <strong>Modo:</strong>
+  <%= @imovel.modo %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @imovel.tipo %>
+</p>
+
+<p>
+  <strong>Preco:</strong>
+  <%= @imovel.preco %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @imovel.endereco %>
+</p>
+
+<p>
+  <strong>Datacadastro:</strong>
+  <%= @imovel.datacadastro %>
+</p>
+
+<p>
+  <strong>Dono:</strong>
+  <%= @imovel.dono %>
+</p>
+
+<%= link_to 'Edit', edit_imovel_path(@imovel) %> |
+<%= link_to 'Back', imovels_path %>

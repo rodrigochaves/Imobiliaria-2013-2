@@ -1,4 +1,6 @@
 Imobiliaria::Application.routes.draw do
+  resources :imovels
+
   resources :donos
 
   resources :codigos
