@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140218130711) do
+ActiveRecord::Schema.define(version: 20140218133109) do
 
   create_table "ambientes", force: true do |t|
     t.string   "descricao"
@@ -55,5 +55,14 @@ ActiveRecord::Schema.define(version: 20140218130711) do
   end
 
   add_index "imovels", ["dono_id"], name: "index_imovels_on_dono_id"
+
+  create_table "interessados", force: true do |t|
+    t.string   "nome"
+    t.string   "login"
+    t.string   "senha"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

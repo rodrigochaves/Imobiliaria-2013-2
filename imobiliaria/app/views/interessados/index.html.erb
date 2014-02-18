@@ -1,0 +1,33 @@
+<h1>Listing interessados</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Login</th>
+      <th>Senha</th>
+      <th>Email</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @interessados.each do |interessado| %>
+      <tr>
+        <td><%= interessado.nome %></td>
+        <td><%= interessado.login %></td>
+        <td><%= interessado.senha %></td>
+        <td><%= interessado.email %></td>
+        <td><%= link_to 'Show', interessado %></td>
+        <td><%= link_to 'Edit', edit_interessado_path(interessado) %></td>
+        <td><%= link_to 'Destroy', interessado, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Interessado', new_interessado_path %>

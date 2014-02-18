@@ -38,7 +38,6 @@ feature 'gerenciar interessado' do
 
         click_button 'Salvar'
 
-        page.should have_content 'Código: 1'
         page.should have_content 'Nome: Rodrigo'
         page.should have_content 'Login: rod'
         page.should have_content 'Senha: 123'
