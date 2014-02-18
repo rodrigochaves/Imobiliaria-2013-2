@@ -36,7 +36,7 @@ feature 'gerenciar dono' do
         fill_in 'Login', :with => "rod"
         fill_in 'Senha', :with => "123"
         fill_in 'Emai-l', :with => "rodrigo@gmail.com"
-        fill_in 'Endereco', :with => "Minha rua"
+        fill_in 'Endereço', :with => "Minha rua"
         fill_in 'CPF', :with => "123456789"
 
         click_button 'Salvar'
