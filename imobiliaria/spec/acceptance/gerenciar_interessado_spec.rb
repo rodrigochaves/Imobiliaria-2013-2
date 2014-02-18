@@ -13,7 +13,7 @@ feature 'gerenciar interessado' do
 
     scenario 'alterar interessado' do #, :js => true  do
 
-        dono = FactoryGirl.create(:interessado)
+        interessado = FactoryGirl.create(:interessado)
 
         visit edit_interessado_path(interessado)
 
@@ -22,7 +22,7 @@ feature 'gerenciar interessado' do
 
     scenario 'excluir interessado' do #, :javascript => true  do
 
-        dono = FactoryGirl.create(:interessado)
+        interessado = FactoryGirl.create(:interessado)
 
         visit interessados_path
 
