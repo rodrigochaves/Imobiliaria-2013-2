@@ -16,7 +16,7 @@
         <td><%= ambiente.descricao %></td>
         <td><%= link_to 'Show', ambiente %></td>
         <td><%= link_to 'Edit', edit_ambiente_path(ambiente) %></td>
-        <td><%= link_to 'Excluir', ambiente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', ambiente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
