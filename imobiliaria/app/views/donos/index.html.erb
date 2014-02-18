@@ -1,0 +1,39 @@
+<h1>Listing donos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Codigo</th>
+      <th>Nome</th>
+      <th>Login</th>
+      <th>Senha</th>
+      <th>Email</th>
+      <th>Endereco</th>
+      <th>Cpf</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @donos.each do |dono| %>
+      <tr>
+        <td><%= dono.codigo %></td>
+        <td><%= dono.nome %></td>
+        <td><%= dono.login %></td>
+        <td><%= dono.senha %></td>
+        <td><%= dono.email %></td>
+        <td><%= dono.endereco %></td>
+        <td><%= dono.cpf %></td>
+        <td><%= link_to 'Show', dono %></td>
+        <td><%= link_to 'Edit', edit_dono_path(dono) %></td>
+        <td><%= link_to 'Destroy', dono, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dono', new_dono_path %>

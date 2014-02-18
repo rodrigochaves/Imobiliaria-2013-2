@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @dono.codigo %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @dono.nome %>
+</p>
+
+<p>
+  <strong>Login:</strong>
+  <%= @dono.login %>
+</p>
+
+<p>
+  <strong>Senha:</strong>
+  <%= @dono.senha %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @dono.email %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @dono.endereco %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @dono.cpf %>
+</p>
+
+<%= link_to 'Edit', edit_dono_path(@dono) %> |
+<%= link_to 'Back', donos_path %>
