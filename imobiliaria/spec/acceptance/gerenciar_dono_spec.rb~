@@ -4,7 +4,7 @@ require 'spec_helper'
 
 feature 'gerenciar dono' do
 
-    scenario 'incluir dono', :javascript => true  do
+    scenario 'incluir dono' do #, :javascript => true do
 
         visit new_dono_path
 
@@ -31,22 +31,22 @@ feature 'gerenciar dono' do
 
     def preencher_e_verificar_dono
 
-        fill_in 'Código', :with => "1"
-        fill_in 'Nome',  :with => "Rodrigo"
-        fill_in 'Login', :with => "rod"
-        fill_in 'Senha', :with => "123"
-        fill_in 'Emai-l', :with => "rodrigo@gmail.com"
-        fill_in 'Endereco', :with => "Minha rua"
-        fill_in 'CPF', :with => "123456789"
+        fill_in 'Codigo', :with => '1'
+        fill_in 'Nome',  :with => 'Rodrigo'
+        fill_in 'Login', :with => 'rod'
+        fill_in 'Senha', :with => '123'
+        fill_in 'Email', :with => 'rodrigo@gmail.com'
+        fill_in 'Endereco', :with => 'Minha rua'
+        fill_in 'Cpf', :with => '123456789'
 
         click_button 'Salvar'
 
-        page.should have_content 'Código: 1'
+        page.should have_content 'Codigo: 1'
         page.should have_content 'Nome: Rodrigo'
         page.should have_content 'Login: rod'
         page.should have_content 'Senha: 123'
-        page.should have_content 'E-mail: rodrigo@gmail.com'
-        page.should have_content 'Endereço: Minha rua'
-        page.should have_content 'CPF: 123456789'
+        page.should have_content 'Email: rodrigo@gmail.com'
+        page.should have_content 'Endereco: Minha rua'
+        page.should have_content 'Cpf: 123456789'
     end
 end
