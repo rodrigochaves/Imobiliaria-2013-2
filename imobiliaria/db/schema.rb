@@ -11,21 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140218140828) do
+ActiveRecord::Schema.define(version: 20140218165745) do
 
   create_table "ambientes", force: true do |t|
     t.string   "descricao"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "codigos", force: true do |t|
-    t.string   "nome"
-    t.string   "login"
-    t.string   "senha"
-    t.string   "email"
-    t.string   "endereco"
-    t.string   "cpf"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -65,10 +54,15 @@ ActiveRecord::Schema.define(version: 20140218140828) do
     t.datetime "updated_at"
   end
 
-  create_table "qtdeambientes", force: true do |t|
-    t.integer  "qtde"
+  create_table "quantidadeambientes", force: true do |t|
+    t.string   "quantidade"
+    t.integer  "imovel_id"
+    t.integer  "ambiente_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "quantidadeambientes", ["ambiente_id"], name: "index_quantidadeambientes_on_ambiente_id"
+  add_index "quantidadeambientes", ["imovel_id"], name: "index_quantidadeambientes_on_imovel_id"
 
 end

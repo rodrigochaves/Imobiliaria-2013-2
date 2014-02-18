@@ -1,0 +1,31 @@
+<h1>Listing quantidadeambientes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Quantidade</th>
+      <th>Imovel</th>
+      <th>Ambiente</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quantidadeambientes.each do |quantidadeambiente| %>
+      <tr>
+        <td><%= quantidadeambiente.quantidade %></td>
+        <td><%= quantidadeambiente.imovel %></td>
+        <td><%= quantidadeambiente.ambiente %></td>
+        <td><%= link_to 'Show', quantidadeambiente %></td>
+        <td><%= link_to 'Edit', edit_quantidadeambiente_path(quantidadeambiente) %></td>
+        <td><%= link_to 'Destroy', quantidadeambiente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Quantidadeambiente', new_quantidadeambiente_path %>

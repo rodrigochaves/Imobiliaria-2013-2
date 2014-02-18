@@ -2,48 +2,48 @@
 
 require 'spec_helper'
 
-feature 'gerenciar qtdeAmbiente' do
+feature 'gerenciar quantidadeambiente' do
 
-    scenario 'incluir qtde_ambiente' do #, :javascript => true do
+    scenario 'incluir quantidadeambiente' do #, :javascript => true do
     
         imovel = FactoryGirl.create(:imovel, :codigo => '1')
         
         ambiente = FactoryGirl.create(:ambiente, :descricao => 'Quarto')
 
-        visit new_qtde_ambiente_path
+        visit new_quantidadeambiente_path
 
-        preencher_e_verificar_qtde_ambiente
+        preencher_e_verificar_quantidadeambiente
     end
 
-    scenario 'alterar qtde_ambiente' do #, :js => true  do
+    scenario 'alterar quantidadeambiente' do #, :js => true  do
     
         imovel = FactoryGirl.create(:imovel, :codigo => '1')
         
         ambiente = FactoryGirl.create(:ambiente, :descricao => 'Quarto')
 
-        qtde_ambiente = FactoryGirl.create(:qtde_ambiente)
+        quantidadeambiente = FactoryGirl.create(:quantidadeambiente, :imovel => imovel, :ambiente => ambiente)
 
-        visit edit_qtde_ambiente_path(qtde_ambiente)
+        visit edit_quantidadeambiente_path(quantidadeambiente)
 
-        preencher_e_verificar_qtde_ambiente
+        preencher_e_verificar_quantidadeambiente
     end
 
-    scenario 'excluir qtde_ambiente' do #, :javascript => true  do
+    scenario 'excluir quantidadeambiente' do #, :javascript => true  do
     
         imovel = FactoryGirl.create(:imovel, :codigo => '1')
         
         ambiente = FactoryGirl.create(:ambiente, :descricao => 'Quarto')
 
-        qtde_ambiente = FactoryGirl.create(:qtde_ambiente)
+        quantidadeambiente = FactoryGirl.create(:quantidadeambiente, :imovel => imovel, :ambiente => ambiente)
 
-        visit qtde_ambiente_path
+        visit quantidadeambientes_path
 
         click_link 'Excluir'
     end
 
-    def preencher_e_verificar_qtde_ambiente
+    def preencher_e_verificar_quantidadeambiente
 
-        fill_in 'qtde', :with => '5'
+        fill_in 'Quantidade', :with => '5'
         
         select '1', :from => 'Imovel'
         select 'Quarto', :from => 'Ambiente'

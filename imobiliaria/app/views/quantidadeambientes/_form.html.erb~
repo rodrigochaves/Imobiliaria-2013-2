@@ -1,0 +1,29 @@
+<%= form_for(@quantidadeambiente) do |f| %>
+  <% if @quantidadeambiente.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@quantidadeambiente.errors.count, "error") %> prohibited this quantidadeambiente from being saved:</h2>
+
+      <ul>
+      <% @quantidadeambiente.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :quantidade %><br>
+    <%= f.text_field :quantidade %>
+  </div>
+  <div class="field">
+    <%= f.label :imovel_id %><br>
+    <%= f.text_field :imovel_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ambiente_id %><br>
+    <%= f.text_field :ambiente_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
