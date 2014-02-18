@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140218133109) do
+ActiveRecord::Schema.define(version: 20140218140828) do
 
   create_table "ambientes", force: true do |t|
     t.string   "descricao"
@@ -61,6 +61,12 @@ ActiveRecord::Schema.define(version: 20140218133109) do
     t.string   "login"
     t.string   "senha"
     t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "qtdeambientes", force: true do |t|
+    t.integer  "qtde"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
