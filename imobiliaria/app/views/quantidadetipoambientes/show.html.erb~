@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Quantidade:</strong>
+  <%= @quantidadetipoambiente.quantidade %>
+</p>
+
+<p>
+  <strong>Interessado:</strong>
+  <%= @quantidadetipoambiente.interessado %>
+</p>
+
+<p>
+  <strong>Ambiente:</strong>
+  <%= @quantidadetipoambiente.ambiente %>
+</p>
+
+<%= link_to 'Edit', edit_quantidadetipoambiente_path(@quantidadetipoambiente) %> |
+<%= link_to 'Back', quantidadetipoambientes_path %>

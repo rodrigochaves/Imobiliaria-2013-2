@@ -1,4 +1,6 @@
 Imobiliaria::Application.routes.draw do
+  resources :quantidadetipoambientes
+
   resources :quantidadeambientes
 
   resources :interessados

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140218165745) do
+ActiveRecord::Schema.define(version: 20140218190009) do
 
   create_table "ambientes", force: true do |t|
     t.string   "descricao"
@@ -64,5 +64,16 @@ ActiveRecord::Schema.define(version: 20140218165745) do
 
   add_index "quantidadeambientes", ["ambiente_id"], name: "index_quantidadeambientes_on_ambiente_id"
   add_index "quantidadeambientes", ["imovel_id"], name: "index_quantidadeambientes_on_imovel_id"
+
+  create_table "quantidadetipoambientes", force: true do |t|
+    t.string   "quantidade"
+    t.integer  "interessado_id"
+    t.integer  "ambiente_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "quantidadetipoambientes", ["ambiente_id"], name: "index_quantidadetipoambientes_on_ambiente_id"
+  add_index "quantidadetipoambientes", ["interessado_id"], name: "index_quantidadetipoambientes_on_interessado_id"
 
 end
