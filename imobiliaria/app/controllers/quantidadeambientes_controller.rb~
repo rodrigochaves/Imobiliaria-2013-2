@@ -1,7 +1,7 @@
 class QuantidadeambientesController < InheritedResources::Base
 
     def build_resource_params
-        [params.fetch(:imovel, {}).permit(:codigo, :modo, :tipo, :preco, :endereco, :datacadastro, :dono_id)]
+        [params.fetch(:quantidadeambiente, {}).permit(:imovel_id, :ambiente_id, :quantidade)]
     end
 
 end
