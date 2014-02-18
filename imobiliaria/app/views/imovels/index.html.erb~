@@ -28,7 +28,7 @@
         <td><%= imovel.dono %></td>
         <td><%= link_to 'Show', imovel %></td>
         <td><%= link_to 'Edit', edit_imovel_path(imovel) %></td>
-        <td><%= link_to 'Excluir', imovel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', imovel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
