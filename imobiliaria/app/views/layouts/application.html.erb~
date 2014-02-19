@@ -12,7 +12,7 @@
     <body>
         <section id="box">
         	<header>
-            	<a href="/" target="_self" class="logo"><img src="logo.png" alt="logo" /></a>
+            	<a href="/" target="_self" class="logo"><%= image_tag("logo.png", :alt => "logo") %><!--<img src="app/assets/images/logo.png" alt="logo" />--></a>
                 <a href="/" target="_self"><h1>Imobiliária</h1></a>
             </header>
             
@@ -22,6 +22,7 @@
                     <li><%= link_to 'Interessado',interessados_path %></li>
                     <li><%= link_to 'Imovel',imovels_path %></li>
                     <li><%= link_to 'Ambiente',ambientes_path %></li>
+                    <li><%= link_to 'Quantidadeambiente',quantidadeambientes_path %></li>
                 </ul>
             </section>
             
@@ -33,6 +34,5 @@
             	<p>&copy; Powered by Rodrigo Chaves</p>
             </footer>
         </section>
-
     </body>
 </html>

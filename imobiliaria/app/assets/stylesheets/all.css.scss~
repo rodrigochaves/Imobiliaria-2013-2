@@ -50,14 +50,13 @@ body{
 #menu ul li{
 	float:left;
 	display:inline;
-	width:108px;
+	width:166px;
 	color:#FFF;
 	font:20px Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
 	font-weight:bold;
 	height:35px;
 	background-color:#030;
 	margin:0 1px;
-	padding:0 70px;
 	cursor:pointer;
 }
 #menu ul li:hover{
