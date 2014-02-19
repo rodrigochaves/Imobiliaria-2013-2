@@ -1,4 +1,5 @@
 Imobiliaria::Application.routes.draw do
+  get "home/index"
   resources :quantidadetipoambientes
 
   resources :quantidadeambientes
