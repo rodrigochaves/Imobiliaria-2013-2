@@ -18,11 +18,12 @@
             
             <section id="menu">
             	<ul>
-                	<li><%= link_to 'Dono',donos_path %></li>
-                    <li><%= link_to 'Interessado',interessados_path %></li>
-                    <li><%= link_to 'Imovel',imovels_path %></li>
-                    <li><%= link_to 'Ambiente',ambientes_path %></li>
+                	<li class="menor"><%= link_to 'Dono',donos_path %></li>
+                    <li class="menor"><%= link_to 'Interessado',interessados_path %></li>
+                    <li class="menor"><%= link_to 'Imovel',imovels_path %></li>
+                    <li class="menor"><%= link_to 'Ambiente',ambientes_path %></li>
                     <li><%= link_to 'Quantidadeambiente',quantidadeambientes_path %></li>
+                    <li><%= link_to 'Quantidadetipoambiente',quantidadetipoambientes_path %></li>
                 </ul>
             </section>
             

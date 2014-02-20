@@ -4,7 +4,7 @@
 }
 
 body{
-	background-color:#CCC;
+	background:#CCCCCC;
 }
 
 #box{
@@ -50,17 +50,22 @@ body{
 #menu ul li{
 	float:left;
 	display:inline;
-	width:166px;
+	width:210px;
 	color:#FFF;
-	font:20px Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font:15px Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
 	font-weight:bold;
-	height:35px;
+	height:21px;
 	background-color:#030;
 	margin:0 1px;
+	padding:7px 2px;
 	cursor:pointer;
 }
 #menu ul li:hover{
 	background-color:#9F9;
+}
+#menu ul .menor{
+    width:100px;
+    padding:7px 20px;
 }
 #menu ul li a{
     text-decoration:none;
